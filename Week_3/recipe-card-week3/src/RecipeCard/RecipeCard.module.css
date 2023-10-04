@@ -57,14 +57,14 @@
   display: flex;
   margin-bottom: 0.75rem;
 
-  & span {
+  /* & span {
     display: block;
-  }
-
+  } */
+/* 
   & .measure {
     width: 25%;
     margin-right: 2rem;
-  }
+  } */
 }
 
 .list_item {
@@ -73,10 +73,10 @@
 
 .instructions_list {
   width: 55%;
-
+/* 
   & ol {
     padding-left: 1.25rem;
-  }
+  } */
 }
 
 .ratings_wrapper {
