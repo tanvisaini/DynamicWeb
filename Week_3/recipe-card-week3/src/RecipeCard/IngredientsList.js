@@ -1,14 +1,17 @@
 import React from 'react'
-// HW: Apply CSS styling
+import styles from './RecipeCard.module.css'
 export default function IngredientsList(props) {
   const {ingredients} = props
 
   return (
-    <div>
-      <h3>Ingredients</h3>
+    <div className={styles.ingredients_list}>
+      <h3 className={styles.list_title}>Ingredients</h3>
       <ul>
-        {ingredients.map((ingred, index) => (
-          <li key={index}>{ingred}</li>
+        {ingredients.map((ingredient, index) => (
+          <li key={index} className={styles.list_item}>
+            <span className={styles.measure}>{ingredient.measure}</span>
+            <span>{ingredient.name}</span>
+          </li>
         ))}
       </ul>
     </div>
