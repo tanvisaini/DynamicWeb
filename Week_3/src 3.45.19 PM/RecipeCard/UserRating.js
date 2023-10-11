@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import {useRef} from 'react'
 import {ReactComponent as Heart} from '@material-design-icons/svg/filled/favorite.svg'
 import styles from './RecipeCard.module.css'
 
@@ -9,17 +8,10 @@ export default function UserRating() {
   // setCounter is our setter for count
   // useState(0) defines the initial count at 0, aka our default state for when the component loads
   const [count, setCount] = useState(0)
-  
-
-  const refMinus = useRef()
-  const refPlus = useRef()
   const handlePlusClick = () => {
     if (count < 5) {
       setCount(count + 1)
     }
-    // if (count == 5) {
-    //   styles.minus.display = 'none'
-    // }
     return
   }
   const handleMinusClick = () => {
@@ -29,18 +21,9 @@ export default function UserRating() {
     return
   }
 
-  // const checkCount = () => {
-  //   if (count == 0){
-  //     refMinus.current.styles.display = 'none'
-  //   }
-  //   if(count == 5){
-  //     refPlus.current.styles.display = 'none'
-  //   }
-  // }
-
   return (
     <div className={styles.ratings_wrapper}>
-      <button refMinus={refMinus} className={styles.minus} onClick={handleMinusClick}>[-]</button>
+      <button onClick={handleMinusClick}>[-]</button>
       {/* Mapping over an array witgh count num
       of slots and render a span with an HTML heart for each */}
       {[...Array(count)].map((heart, i) => {
@@ -50,7 +33,7 @@ export default function UserRating() {
           </span>
         )
       })}
-      <button refPlus={refPlus} onClick={handlePlusClick}>[+]</button>
+      <button onClick={handlePlusClick}>[+]</button>
     </div>
   )
 }

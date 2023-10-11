@@ -7,8 +7,14 @@ import Card from './Card'
 import UserRating from './UserRating'
 import styles from './RecipeCard.module.css'
 
-export default function RecipeCard(props) {
-  const recipe = props.recipe
+import type {RecipeProps} from './recipe-data'
+
+type Props = {
+  recipe: RecipeProps
+}
+
+export default function RecipeCard(props: Props) {
+  const {recipe} = props
   return (
     <Card>
       <RecipeImg imgSrc={recipe.imgSrc} />

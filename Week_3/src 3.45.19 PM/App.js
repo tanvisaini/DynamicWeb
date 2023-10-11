@@ -1,6 +1,7 @@
 import React from 'react'
 import RecipeCard from './RecipeCard'
 import {RECIPE_LIST} from './RecipeCard/recipe-data'
+import './RecipeCard/styles/global.css'
 
 function App() {
   return (
