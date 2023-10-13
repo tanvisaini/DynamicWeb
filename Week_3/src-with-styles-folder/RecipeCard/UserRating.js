@@ -8,7 +8,6 @@ export default function UserRating() {
   // setCounter is our setter for count
   // useState(0) defines the initial count at 0, aka our default state for when the component loads
   const [count, setCount] = useState(0)
-  
   const handlePlusClick = () => {
     if (count < 5) {
       setCount(count + 1)
@@ -24,6 +23,7 @@ export default function UserRating() {
 
   return (
     <div className={styles.ratings_wrapper}>
+      <button onClick={handleMinusClick}>[-]</button>
       {/* Mapping over an array witgh count num
       of slots and render a span with an HTML heart for each */}
       {[...Array(count)].map((heart, i) => {
@@ -33,8 +33,7 @@ export default function UserRating() {
           </span>
         )
       })}
-      {count < 5 && <button className={styles.plus} onClick={handlePlusClick}>[+]</button>}
-      {count > 0 && <button className={styles.minus} onClick={handleMinusClick}>[-]</button>}
+      <button onClick={handlePlusClick}>[+]</button>
     </div>
   )
 }

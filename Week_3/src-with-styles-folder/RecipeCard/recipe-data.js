@@ -1,4 +1,20 @@
-export const RECIPE = {
+// @flow
+
+export type IngredientProps={|
+  neasure: string, 
+  name: string,
+|}
+export type RecipeProps={|
+  title: string,
+  imgSrc: string,
+  description?: string,
+  ingredients: Array<IngredientProps>,
+  instructions: Array<string>,
+|}
+
+export type RecipeListProps = Array<RecipeProps>
+
+export const RECIPE: RecipeProps = {
   title: 'Buttermilk Pancakes',
   imgSrc: require('../assets/pancake.png'),
   description:
@@ -23,7 +39,7 @@ export const RECIPE = {
   ],
 }
 
-export const RECIPE_LIST = [
+export const RECIPE_LIST: RecipeListProps = [
   {
     title: 'Kaya toast',
     imgSrc: require('../assets/kaya.png'),
@@ -92,7 +108,7 @@ export const RECIPE_LIST = [
         measure: '1 teaspoon',
       },
     ],
-    instructions: [
+    instructions: ~[
       'Wrap steak in plastic wrap, and place in the freezer for 30 minutes. Unwrap and slice across the grain into 1/4-inch thick slices.',
       'In a medium bowl, combine pear, soy sauce, brown sugar, sesame oil, garlic, ginger and gochujang. In a gallon size Ziploc bag, combine soy sauce mixture and steak; marinate for at least 2 hours to overnight, turning the bag occasionally.',
       'Heat 1 tablespoon vegetable oil in a cast iron grill pan over medium-high heat.* Working in batches, add steak to the grill pan in a single layer and cook, flipping once, until charred and cooked through, about 2-3 minutes per side. Repeat with remaining 1 tablespoon vegetable oil and steak.',
