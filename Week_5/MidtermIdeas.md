@@ -1,5 +1,4 @@
-Midterm Project Ideas: 
-User customization!
+## Midterm Project Ideas: User customization!
 
 Charcuterie Board Creator
  
