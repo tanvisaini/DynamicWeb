@@ -1,4 +1,3 @@
-# Week 07 
-REST API server set up was completed during this class with no homework.  
-Midterm projects were presented as well. 
+# Week 08 
+No homework was due. Used create context, use state and use effect to continue to update todos website.
 Project Link -> https://github.com/Amy-Fouzia/Bored
